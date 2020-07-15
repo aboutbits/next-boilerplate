@@ -4,14 +4,16 @@
     "node": true,
     "browser": true,
     "es6": true,
-    "commonjs": true
+    "commonjs": true,
+    "jest/globals": true
   },
   "plugins": [
     "import",
     "react",
     "react-hooks",
     "prettier",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "jest"
   ],
   "extends": [
     "prettier/react",
