@@ -15,27 +15,20 @@ const Home: React.FC = () => {
         <ul className="space-y-4 mx-10 mt-10">
           <li>
             <Link href="/projects/[id]" as="/projects/1">
-              <a>
-                Project 1
-              </a>
+              <a>Project 1</a>
             </Link>
           </li>
           <li>
             <Link href="/projects/[id]" as="/projects/2">
-              <a>
-                Project 2
-              </a>
+              <a>Project 2</a>
             </Link>
           </li>
           <li>
             <Link href="/projects/[id]" as="/projects/3">
-              <a>
-                Project 3
-              </a>
+              <a>Project 3</a>
             </Link>
           </li>
         </ul>
-
       </main>
     </div>
   )

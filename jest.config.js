@@ -1,8 +1,8 @@
 module.exports = {
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': 'babel-jest'
   },
   moduleNameMapper: {
-    '\\.(css|less)$': 'identity-obj-proxy',
-  },
+    '\\.(css|less)$': 'identity-obj-proxy'
+  }
 }
