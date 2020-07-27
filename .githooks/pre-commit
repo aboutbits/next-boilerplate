@@ -3,4 +3,4 @@
 set -e
 set -o pipefail
 
-yarn lint
+npm run lint
