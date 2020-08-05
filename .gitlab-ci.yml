@@ -1,0 +1,30 @@
+image: registry.gitlab.com/aboutbits/docker-inside-docker:19
+
+services:
+  - docker:19.03-dind
+
+stages:
+  - setup
+  - test
+
+cache:
+  paths:
+    - node_modules
+
+before_script:
+  - docker network create proxy
+
+setup:
+  stage: setup
+  script:
+    - docker-compose run --rm -T node npm install
+
+lint:
+  stage: test
+  script:
+    - docker-compose run --rm -T node npm run lint
+
+test:
+  stage: test
+  script:
+    - docker-compose run --rm -T node npm run test

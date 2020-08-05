@@ -1,28 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Boilerplate
 
-## Getting Started
+## Table of Content
 
-First, run the development server:
+1. [Prerequisites](#prerequisites)
+2. [Setup](#setup)
+3. [Development](#development)
+
+## Prerequisites
+
+- [Docker](https://www.docker.com) / [Docker for Mac](https://docs.docker.com/docker-for-mac/) / [Docker for Windows](https://docs.docker.com/docker-for-windows/)
+- [Local Docker Environment](https://github.com/aboutbits/local-environment)
+
+## Setup
+
+Install all dependencies by executing the following command:
 
 ```bash
-npm run dev
+docker-compose run --rm node npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Point the domain in your `/etc/hosts` file to your localhost:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+127.0.0.1 web.aboutbits.local
+```
 
-## Learn More
+To start the Docker containers, execute one of the following commands:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker-compose up --detach
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# or if you want to force a rebuild of the containers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+docker-compose build --pull
+docker-compose up --detach
+```
 
-## Deploy on Vercel
+## Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For linting the source files, execute the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+docker-compose run --rm node npm run lint
+
+# or
+
+docker-compose run --rm node npm run lint:fix
+```
+
+For running the tests, execute the following command:
+
+```bash
+docker-compose run --rm node npm run test
+
+#or
+
+docker-compose run --rm node npm run test:watch
+```
