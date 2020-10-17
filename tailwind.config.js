@@ -1,14 +1,8 @@
 module.exports = {
-  purge: [
-    './pages/**/*.js',
-    './pages/**/*.jsx',
-    './pages/**/*.ts',
-    './pages/**/*.tsx',
-    './components/**/*.js',
-    './components/**/*.jsx',
-    './components/**/*.ts',
-    './components/**/*.tsx'
-  ],
+  future: {
+    purgeLayersByDefault: true
+  },
+  purge: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.ts', './src/**/*.tsx'],
   theme: {},
   variants: {}
 }
