@@ -1,8 +1,8 @@
 module.exports = {
   future: {
-    purgeLayersByDefault: true,
+    purgeLayersByDefault: true
   },
   purge: ['./src/**/*.js', './src/**/*.jsx', './src/**/*.ts', './src/**/*.tsx'],
   theme: {},
-  variants: {},
+  variants: {}
 }

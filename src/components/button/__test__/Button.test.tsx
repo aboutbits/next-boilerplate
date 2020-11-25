@@ -6,7 +6,7 @@ function renderButton(): RenderResult {
   return render(<Button variant={Variant.primary}>xyz</Button>)
 }
 
-test('renders the button', function () {
+test('renders the button', function() {
   const { queryByText } = renderButton()
 
   expect(queryByText(/xyz/i)).toBeInTheDocument()
