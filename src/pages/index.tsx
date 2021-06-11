@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { Button, Variant } from '../components/button/Button'
 
 const Home: React.FC = () => {
   return (
@@ -29,6 +30,14 @@ const Home: React.FC = () => {
             </Link>
           </li>
         </ul>
+        <div className="mt-8">
+          <Button
+            onClick={() => console.log('Click Me!')}
+            variant={Variant.primary}
+          >
+            Hello
+          </Button>
+        </div>
       </main>
     </div>
   )
